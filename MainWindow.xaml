@@ -1,0 +1,77 @@
+﻿<Window x:Class="MessageApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MessageApp"
+        mc:Ignorable="d"
+        Title="Napier Bank Messaging" Height="650" Width="1000" Background="#f7f7ff">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!--Row 1-->
+        <TextBlock Name="lbl_header" Text="Message Header" FontWeight="DemiBold" FontSize="20" Margin="30,0,0,0" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Name="lbl_display" Text="Display" FontWeight="DemiBold" FontSize="20" Foreground="Black" Margin="350,0,0,10" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="4"/>
+        
+        <!--Row 2-->
+        <TextBox Name="txt_header" Text="E1234567701" Grid.Column="1" Grid.Row="2" MinHeight="30" FontSize="16" Margin="0,10,0,10" TextChanged="txt_header_TextChanged"/>
+        
+        <!--Row 3-->
+        <TextBlock Name="lbl_message" Text="Message Body" FontWeight="DemiBold" FontSize="20" Margin="30,0,0,0" Grid.Column="1" Grid.Row="3"/>
+
+        <!--Row 4-->
+        <TextBox Name="txt_body" Text="abc@gmail.com, Subject, Hello how are you? Regards, abc" TextWrapping="Wrap" Grid.Column="1" Grid.Row="5" MinHeight="150" FontSize="12" Margin="0,10,0,10"/>
+        <TextBlock Name="lbl_sender" Text="Sender" FontWeight="DemiBold" FontSize="20" Margin="30,0,0,0" Grid.Column="3" Grid.Row="3"/>
+        <TextBlock Name="lbl_subject" Text="Subject" FontWeight="DemiBold" FontSize="20" Margin="30,0,0,0" Grid.Column="4" Grid.Row="3"/>
+        <TextBlock Name="lbl_text" Text="Text" FontWeight="DemiBold" FontSize="20" Margin="80,0,0,0" Grid.Column="5" Grid.Row="3"/>
+        <TextBlock Name="lbl_url" Text="URL" FontWeight="DemiBold" FontSize="20" Margin="80,0,0,0" Grid.Column="6" Grid.Row="3"/>
+        
+        <!--Row 5-->
+        <TextBox Name="txt_sender" Text="abc@gmail.com" TextWrapping="Wrap" Grid.Column="3" Grid.Row="5" Margin="10"/>
+        <TextBox Name="txt_subject" Text="Hello" TextWrapping="Wrap" Grid.Column="4" Grid.Row="5" Margin="10"/>
+        <TextBox Name="txt_text" Text=" Hello how are you? Regards, abc" TextWrapping="Wrap" Grid.Column="5" Grid.Row="5" Margin="10"/>
+        <TextBox Name="txt_url" Text=" www.google.com" TextWrapping="Wrap" Grid.Column="6" Grid.Row="5" Margin="10"/>
+        
+        <!--Row 6-->
+        <Button Name="btn_add" Content="Add" Margin="10" Grid.Column="1" Grid.Row="6" FontSize="20" Background="#bdd5ea" Click="btn_add_Click"/>
+        <TextBlock Name="lbl_trending" Text="Trending" Grid.Column="3" Grid.Row="6" FontWeight="DemiBold" FontSize="20" Margin="50,0,0,0"/>
+        <TextBlock Name="lbl_SIR" Text="SIR" Grid.Column="4" Grid.Row="6" FontWeight="DemiBold" FontSize="20" Margin="70,0,0,0"/>
+        <TextBlock Name="lbl_mentions" Text="Mentions" Grid.Column="5" Grid.Row="6" FontWeight="DemiBold" FontSize="20" Margin="50,0,0,0"/>
+        <!--Row 7-->
+        <Button Name="btn_findFile" Content="Locate File" Margin="10" Grid.Column="1" Grid.Row="7" Foreground="black" FontSize="20" Background="#bdd5ea" Click="btn_findFile_Click"/>
+        <TextBox Name="txt_trending" Text="#Edinburgh" TextWrapping="Wrap" Grid.Column="3" Grid.Row="7" MinHeight="150" FontSize="12" Margin="10,10,10,10" Grid.RowSpan="5"/>
+        <TextBox Name="txt_SIR" Text="ATM Theft" TextWrapping="Wrap" Grid.Column="4" Grid.Row="7" MinHeight="150" FontSize="12" Margin="10,10,10,10" Grid.RowSpan="5"/>
+        <TextBox Name="txt_mentions" Text="@JohnSmith" TextWrapping="Wrap" Grid.Column="5" Grid.Row="7" MinHeight="150" FontSize="12" Margin="10,10,10,10" Grid.RowSpan="5"/>
+        <!--Row 8-->
+        <TextBlock Name="lbl_fileName" Text="No file entered" TextWrapping="Wrap" Grid.Column="1" Grid.Row="8" Margin="10,0,0,0"/>
+        <!--Row 9-->
+        <Button Name="btn_clear" Content="Clear" Margin="10" Grid.Column="1" Grid.Row="9" FontSize="20" Background="#bdd5ea" Click="btn_clear_Click" />
+        <!--Row 10-->
+        <Button Name="btn_process" Content="Process" Margin="10" Grid.Column="1" Grid.Row="10" FontSize="20" Background="#fe5f55" />
+    </Grid>
+
+
+</Window>
